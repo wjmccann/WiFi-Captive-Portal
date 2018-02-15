@@ -37,3 +37,12 @@ def wall():
     idiots = Idiot.query.all()
 
     return render_template('wall.html', idiots=idiots, title="Wall of Idiots")
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return redirect(url_for(index))
+
+@app.errorhandler(400)
+def bad_request(e):
+    return redirect(url_for(index))
+
