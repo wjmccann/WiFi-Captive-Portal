@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block content %}
+        <h1>Welcome to B-Sides Canberra Access Portal</h1>
+        <h3>Register for a FREE account to get access to conference WiFi</h3>
+        <div class "row">
+            <div class="col-md-4 col-md-offset-3">
+                {{ wtf.quick_form(form) }}
+            </div>
+        </div>
+        
+ {% endblock %}

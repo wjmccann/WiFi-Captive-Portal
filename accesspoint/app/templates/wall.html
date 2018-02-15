@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+        <h1>The Wall of Idiots</h1>
+        <p align='center'>
+            <table>
+                <tr>
+                    <td>Username</td>
+                    <td>Password</td>
+                    <td>User Agent</td>
+                </tr>
+                {% for idiot in idiots %}
+                <tr>
+                    <td>{{ idiot.username }}</td>
+                    <td>{{ idiot.password }}</td>
+                    <td>{{ idiot.user_agent }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </p>
+{% endblock %}
